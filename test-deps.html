@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Тест зависимостей</title>
+</head>
+<body>
+    <h1>Тест загрузки зависимостей</h1>
+    <div id="status">
+        <p>Проверка Reveal.js: <span id="reveal-status">Проверяется...</span></p>
+        <p>Проверка MathJax: <span id="mathjax-status">Проверяется...</span></p>
+        <p>Проверка CSS: <span id="css-status">Проверяется...</span></p>
+    </div>
+    
+    <script>
+        // Проверка Reveal.js
+        setTimeout(function() {
+            if (typeof Reveal !== 'undefined') {
+                document.getElementById('reveal-status').textContent = '✓ Загружен';
+                document.getElementById('reveal-status').style.color = 'green';
+            } else {
+                document.getElementById('reveal-status').textContent = '✗ Не загружен';
+                document.getElementById('reveal-status').style.color = 'red';
+            }
+        }, 1000);
+        
+        // Проверка MathJax
+        setTimeout(function() {
+            if (window.MathJax) {
+                document.getElementById('mathjax-status').textContent = '✓ Загружен';
+                document.getElementById('mathjax-status').style.color = 'green';
+            } else {
+                document.getElementById('mathjax-status').textContent = '✗ Не загружен';
+                document.getElementById('mathjax-status').style.color = 'red';
+            }
+        }, 1500);
+        
+        // Проверка CSS (косвенная)
+        setTimeout(function() {
+            var styles = document.styleSheets;
+            var found = false;
+            for (var i = 0; i < styles.length; i++) {
+                if (styles[i].href && styles[i].href.includes('reveal')) {
+                    found = true;
+                    break;
+                }
+            }
+            if (found) {
+                document.getElementById('css-status').textContent = '✓ Загружен';
+                document.getElementById('css-status').style.color = 'green';
+            } else {
+                document.getElementById('css-status').textContent = '✗ Не загружен';
+                document.getElementById('css-status').style.color = 'red';
+            }
+        }, 2000);
+    </script>
+    
+    <!-- Зависимости -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</body>
+</html>

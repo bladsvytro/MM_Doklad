@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Начала Евклида: Минимальная версия</title>
+    <meta name="description" content="Упрощенная презентация по Евклидовой геометрии">
+    
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css" id="theme">
+    
+    <!-- MathJax для формул -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Упрощенные стили -->
+    <link rel="stylesheet" href="css/simple-styles.css">
+    
+    <!-- Иконка -->
+    <link rel="icon" type="image/svg+xml" href="assets/euclid-icon.svg">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Слайд 1: Заглавный -->
+            <section>
+                <h1>Начала Евклида</h1>
+                <h3>Минимальная рабочая версия</h3>
+                <p>Используйте стрелки ← → для навигации</p>
+                <p class="fragment">Нажмите пробел для перехода между подразделами</p>
+            </section>
+
+            <!-- Слайд 2: Основные понятия -->
+            <section>
+                <h2>Основные понятия</h2>
+                <ul>
+                    <li class="fragment">Точка — то, что не имеет частей</li>
+                    <li class="fragment">Линия — длина без ширины</li>
+                    <li class="fragment">Прямая — линия, равномерно расположенная относительно точек на ней</li>
+                    <li class="fragment">Поверхность — то, что имеет только длину и ширину</li>
+                </ul>
+            </section>
+
+            <!-- Слайд 3: Постулаты -->
+            <section>
+                <section>
+                    <h2>Пять постулатов Евклида</h2>
+                    <ol>
+                        <li class="fragment">Через любые две точки можно провести прямую</li>
+                        <li class="fragment">Ограниченную прямую можно непрерывно продолжать</li>
+                        <li class="fragment">Из любого центра можно описать окружность любого радиуса</li>
+                        <li class="fragment">Все прямые углы равны между собой</li>
+                        <li class="fragment">Если прямая пересекает две прямые и внутренние односторонние углы меньше двух прямых, то эти две прямые пересекаются</li>
+                    </ol>
+                </section>
+                
+                <section>
+                    <h2>Пятый постулат</h2>
+                    <p>Также известен как аксиома о параллельных:</p>
+                    <div class="math">
+                        $$ \text{Если } \alpha + \beta < 180^\circ \text{, то прямые пересекаются} $$
+                    </div>
+                    <p class="fragment">Этот постулат привел к созданию неевклидовых геометрий</p>
+                </section>
+            </section>
+
+            <!-- Слайд 4: Теорема Пифагора -->
+            <section>
+                <h2>Теорема Пифагора</h2>
+                <p>В прямоугольном треугольнике квадрат гипотенузы равен сумме квадратов катетов:</p>
+                <div class="math">
+                    $$ a^2 + b^2 = c^2 $$
+                </div>
+                <div class="fragment">
+                    <p>Доказательство в "Началах" (Предложение 47, Книга I)</p>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Pythagorean.svg/200px-Pythagorean.svg.png" alt="Доказательство теоремы Пифагора" style="max-height: 200px;">
+                </div>
+            </section>
+
+            <!-- Слайд 5: Заключение -->
+            <section>
+                <h2>Заключение</h2>
+                <p>"Начала" Евклида — основа классической геометрии</p>
+                <ul>
+                    <li class="fragment">13 книг, 465 предложений</li>
+                    <li class="fragment">Аксиоматический метод</li>
+                    <li class="fragment">Влияние на математику более 2000 лет</li>
+                </ul>
+                <p class="fragment" style="margin-top: 2rem;">Спасибо за внимание!</p>
+            </section>
+        </div>
+    </div>
+
+    <!-- Reveal.js и упрощенный JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    <script src="js/simple-main.js"></script>
+</body>
+</html>

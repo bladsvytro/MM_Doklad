@@ -700,3 +700,50 @@ body {
     color: #155724;
     margin-bottom: 0.5rem;
 }
+
+/* Выделение текущего слайда */
+.current-slide {
+    box-shadow: 0 0 0 3px var(--secondary-color);
+    border-radius: var(--border-radius);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Улучшение адаптивности для очень маленьких экранов */
+@media (max-width: 480px) {
+    .reveal h1 {
+        font-size: 2.5rem;
+    }
+    
+    .reveal h2 {
+        font-size: 2rem;
+    }
+    
+    .reveal p, .reveal li {
+        font-size: 1.2rem;
+    }
+    
+    .interactive-controls {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .interactive-controls button {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 0.5rem;
+    }
+    
+    #geometry-canvas {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }
+    
+    .canvas-container {
+        padding: 0.5rem;
+    }
+    
+    .platonic-solids {
+        grid-template-columns: 1fr;
+    }
+}

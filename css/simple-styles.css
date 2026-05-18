@@ -1,0 +1,135 @@
+/* Упрощенные стили для минимальной версии презентации */
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --light-bg: #f8f9fa;
+    --dark-text: #2c3e50;
+    --light-text: #ecf0f1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+    color: var(--dark-text);
+    background: #f5f7fa;
+    overflow: hidden;
+}
+
+.reveal {
+    font-family: inherit;
+}
+
+.reveal .slides {
+    text-align: left;
+    width: 90% !important;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.reveal h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+}
+
+.reveal h2 {
+    font-size: 2.2rem;
+    border-bottom: 2px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.reveal h3 {
+    font-size: 1.6rem;
+    color: var(--secondary-color);
+}
+
+.reveal p {
+    font-size: 1.3rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.reveal ul, .reveal ol {
+    font-size: 1.2rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.reveal li {
+    margin-bottom: 0.5rem;
+}
+
+.reveal section img {
+    border: none;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    max-width: 100%;
+    height: auto;
+}
+
+.math {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid var(--secondary-color);
+}
+
+.fragment {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.fragment.visible {
+    opacity: 1;
+}
+
+/* Навигационные подсказки */
+.reveal .controls {
+    color: var(--secondary-color);
+}
+
+.reveal .progress {
+    background: rgba(0,0,0,0.1);
+}
+
+.reveal .progress span {
+    background: var(--secondary-color);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .reveal h1 {
+        font-size: 2.2rem;
+    }
+    
+    .reveal h2 {
+        font-size: 1.8rem;
+    }
+    
+    .reveal h3 {
+        font-size: 1.4rem;
+    }
+    
+    .reveal p, .reveal li {
+        font-size: 1.1rem;
+    }
+    
+    .math {
+        font-size: 1.2rem;
+        padding: 0.8rem;
+    }
+}
