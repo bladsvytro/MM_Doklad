@@ -1,0 +1,702 @@
+/* Основные стили для презентации "Начала Евклида" */
+
+:root {
+    --primary-color: #2c3e50;
+    --secondary-color: #3498db;
+    --accent-color: #e74c3c;
+    --golden-ratio: #f39c12;
+    --light-bg: #f8f9fa;
+    --dark-text: #2c3e50;
+    --light-text: #ecf0f1;
+    --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--dark-text);
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    overflow: hidden;
+}
+
+.reveal {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.reveal .slides {
+    text-align: left;
+}
+
+.reveal h1, .reveal h2, .reveal h3 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.reveal h1 {
+    font-size: 3.5rem;
+    color: var(--primary-color);
+    text-shadow: var(--shadow);
+}
+
+.reveal h2 {
+    font-size: 2.5rem;
+    border-bottom: 3px solid var(--secondary-color);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.reveal h3 {
+    font-size: 1.8rem;
+    color: var(--secondary-color);
+}
+
+.reveal p {
+    font-size: 1.4rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.reveal ul, .reveal ol {
+    font-size: 1.3rem;
+    margin-left: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.reveal li {
+    margin-bottom: 0.5rem;
+}
+
+/* Заглавный слайд */
+.title-slide {
+    text-align: center;
+    padding: 4rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a252f 100%);
+    color: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.title-slide h1 {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.title-slide h2 {
+    font-size: 2.5rem;
+    color: var(--light-text);
+    border-bottom: none;
+    margin-bottom: 2rem;
+}
+
+.title-slide .author {
+    font-size: 1.5rem;
+    font-style: italic;
+    margin-top: 2rem;
+    color: #bdc3c7;
+}
+
+.navigation-hint {
+    font-size: 1.2rem;
+    margin-top: 3rem;
+    color: #95a5a6;
+    font-style: italic;
+}
+
+/* Сетка контента */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.text-content {
+    padding-right: 2rem;
+}
+
+.image-content {
+    text-align: center;
+}
+
+.euclid-portrait {
+    width: 300px;
+    height: 300px;
+    background: linear-gradient(135deg, #d7ccc8 0%, #8d6e63 100%);
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+
+.euclid-portrait::before {
+    content: "Εὐκλείδης";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.caption {
+    font-size: 1.2rem;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Структура книг */
+.books-structure {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.book-category {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border-left: 5px solid var(--secondary-color);
+}
+
+.book-category h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.book-category p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Аксиомы и постулаты */
+.axioms-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.axiom {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.axiom:hover {
+    transform: translateY(-5px);
+}
+
+.axiom h3 {
+    color: var(--accent-color);
+    margin-bottom: 1rem;
+}
+
+.postulates ol {
+    font-size: 1.4rem;
+    margin-left: 3rem;
+}
+
+.postulates li {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.postulates li.highlight {
+    background: #fff3cd;
+    border-left: 4px solid var(--golden-ratio);
+    padding-left: 1rem;
+}
+
+.note {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #7f8c8d;
+    margin-top: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+}
+
+/* Теорема Пифагора */
+.pythagoras-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.formula {
+    padding: 2rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.math-formula {
+    font-size: 2.5rem;
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+}
+
+.visualization {
+    height: 300px;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.placeholder-visual {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Доказательство */
+.proof-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.step {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.step-number {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    background: var(--secondary-color);
+    color: white;
+    border-radius: 50%;
+    line-height: 40px;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.euclid-quote {
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--primary-color);
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+    border-left: 5px solid var(--secondary-color);
+    margin-top: 2rem;
+}
+
+/* Интерактивная геометрия */
+.interactive-container {
+    margin-top: 2rem;
+}
+
+.interactive-controls {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.interactive-controls button {
+    padding: 0.8rem 1.5rem;
+    background: var(--secondary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.interactive-controls button:hover {
+    background: #2980b9;
+}
+
+.canvas-container {
+    background: white;
+    padding: 1rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    justify-content: center;
+}
+
+#geometry-canvas {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.instruction {
+    font-size: 1.1rem;
+    color: #7f8c8d;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Золотое сечение */
+.golden-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.definition {
+    padding: 2rem;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+}
+
+.visual {
+    text-align: center;
+}
+
+.golden-line {
+    display: flex;
+    height: 100px;
+    margin: 2rem 0;
+    border: 2px solid var(--dark-text);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.segment {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.segment.whole {
+    background: var(--primary-color);
+    flex: 1.618;
+}
+
+.segment.major {
+    background: var(--golden-ratio);
+    flex: 1;
+}
+
+.segment.minor {
+    background: var(--secondary-color);
+    flex: 0.618;
+}
+
+.ratio {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--golden-ratio);
+    margin-top: 1rem;
+}
+
+/* Золотой прямоугольник */
+.golden-rectangle-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.construction-steps ol {
+    font-size: 1.3rem;
+}
+
+.construction-steps li {
+    margin-bottom: 0.8rem;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.spiral-visual {
+    height: 250px;
+    background: white;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.placeholder-spiral {
+    text-align: center;
+    color: #7f8c8d;
+    font-style: italic;
+}
+
+/* Платоновы тела */
+.platonic-solids {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.solid {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.solid:hover {
+    transform: translateY(-5px);
+}
+
+.solid-name {
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.solid-faces {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+.historical-note {
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #7f8c8d;
+    margin-top: 2rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+}
+
+/* Наследие */
+.legacy-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.legacy-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    border-top: 4px solid var(--secondary-color);
+}
+
+.legacy-item h3 {
+    color: var(--primary-color);
+    margin-bottom: 0.8rem;
+}
+
+.final-quote {
+    font-size: 2rem;
+    text-align: center;
+    font-style: italic;
+    color: var(--primary-color);
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: var(--border-radius);
+}
+
+.final-quote .author {
+    display: block;
+    font-size: 1.4rem;
+    margin-top: 1rem;
+    color: #7f8c8d;
+}
+
+/* Заключение */
+.conclusion-slide {
+    padding: 2rem;
+}
+
+.key-points {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.point {
+    background: white;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+}
+
+.point h3 {
+    color: var(--secondary-color);
+    margin-bottom: 1rem;
+}
+
+.resources {
+    margin: 3rem 0;
+    padding: 2rem;
+    background: #f8f9fa;
+    border-radius: var(--border-radius);
+}
+
+.resources h3 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.resources ul {
+    list-style: none;
+    margin-left: 0;
+}
+
+.resources li {
+    margin-bottom: 0.8rem;
+}
+
+.resources a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-size: 1.3rem;
+}
+
+.resources a:hover {
+    text-decoration: underline;
+}
+
+.thank-you {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--primary-color) 0%, #1a252f 100%);
+    color: white;
+    border-radius: var(--border-radius);
+}
+
+.thank-you p {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.presenter {
+    font-size: 1.3rem !important;
+    color: #bdc3c7;
+    font-style: italic;
+}
+
+/* Адаптивность */
+@media (max-width: 1200px) {
+    .content-grid,
+    .pythagoras-container,
+    .golden-section,
+    .golden-rectangle-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .platonic-solids {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .key-points {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .reveal h1 {
+        font-size: 2.5rem;
+    }
+    
+    .reveal h2 {
+        font-size: 2rem;
+    }
+    
+    .axioms-container,
+    .proof-steps,
+    .legacy-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .platonic-solids {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .key-points {
+        grid-template-columns: 1fr;
+    }
+    
+    .books-structure {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Анимации */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.reveal .slides section {
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Специальные классы для математических формул */
+.math-inline {
+    font-size: 1.4rem;
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #fff3cd 0%, #ffeaa7 100%);
+    border: 2px solid var(--golden-ratio);
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.theorem {
+    background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+    border-left: 5px solid #28a745;
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    margin: 1.5rem 0;
+}
+
+.theorem h4 {
+    color: #155724;
+    margin-bottom: 0.5rem;
+}

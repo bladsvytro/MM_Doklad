@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Начала Евклида: Суть главных математических фактов</title>
+    <meta name="description" content="Интерактивная презентация по Евклидовой геометрии с визуализациями и формулами">
+    
+    <!-- Reveal.js CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/theme/white.min.css" id="theme">
+    
+    <!-- MathJax для формул -->
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <!-- Стили проекта -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Иконка -->
+    <link rel="icon" type="image/svg+xml" href="assets/euclid-icon.svg">
+    
+    <!-- Шрифты -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Source+Sans+Pro:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="reveal">
+        <div class="slides">
+            <!-- Слайд 1: Заглавный -->
+            <section>
+                <div class="title-slide">
+                    <h1>Начала Евклида</h1>
+                    <h2>Суть главных математических фактов</h2>
+                    <div class="author">Интерактивная презентация по геометрии</div>
+                    <div class="navigation-hint">Используйте ← → для навигации</div>
+                </div>
+            </section>
+
+            <!-- Слайд 2: Введение -->
+            <section>
+                <section>
+                    <h2>Что такое "Начала"?</h2>
+                    <div class="content-grid">
+                        <div class="text-content">
+                            <p><strong>"Начала" (Στοιχεῖα)</strong> — фундаментальный труд древнегреческого математика Евклида, написанный около 300 года до н.э.</p>
+                            <ul>
+                                <li>13 книг, содержащих 465 предложений</li>
+                                <li>Основа всей классической геометрии</li>
+                                <li>Первый систематический учебник математики</li>
+                                <li>Второе по количеству изданий произведение после Библии</li>
+                            </ul>
+                        </div>
+                        <div class="image-content">
+                            <div class="euclid-portrait"></div>
+                            <div class="caption">Евклид Александрийский</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2>Структура "Начал"</h2>
+                    <div class="books-structure">
+                        <div class="book-category">
+                            <h3>Книги I-VI</h3>
+                            <p>Планиметрия (геометрия на плоскости)</p>
+                        </div>
+                        <div class="book-category">
+                            <h3>Книги VII-IX</h3>
+                            <p>Теория чисел и арифметика</p>
+                        </div>
+                        <div class="book-category">
+                            <h3>Книги X</h3>
+                            <p>Иррациональные величины</p>
+                        </div>
+                        <div class="book-category">
+                            <h3>Книги XI-XIII</h3>
+                            <p>Стереометрия (геометрия в пространстве)</p>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Слайд 3: Аксиомы и постулаты -->
+            <section>
+                <section>
+                    <h2>Аксиоматический метод</h2>
+                    <p>Евклид впервые применил аксиоматический подход:</p>
+                    <div class="axioms-container">
+                        <div class="axiom">
+                            <h3>Постулаты (5)</h3>
+                            <p>Геометрические допущения, специфичные для геометрии</p>
+                        </div>
+                        <div class="axiom">
+                            <h3>Общие понятия (5)</h3>
+                            <p>Логические принципы, применимые ко всем наукам</p>
+                        </div>
+                        <div class="axiom">
+                            <h3>Определения (23)</h3>
+                            <p>Точные формулировки базовых понятий</p>
+                        </div>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2>Пять постулатов Евклида</h2>
+                    <div class="postulates">
+                        <ol>
+                            <li>Через любые две точки можно провести прямую</li>
+                            <li>Любой отрезок можно неограниченно продолжить</li>
+                            <li>Из любого центра можно описать окружность любого радиуса</li>
+                            <li>Все прямые углы равны между собой</li>
+                            <li class="highlight">Если прямая, пересекающая две прямые, образует внутренние односторонние углы, в сумме меньшие двух прямых, то эти две прямые пересекаются</li>
+                        </ol>
+                    </div>
+                    <p class="note">Пятый постулат (о параллельных) вызвал наибольшие дискуссии и привел к созданию неевклидовых геометрий</p>
+                </section>
+            </section>
+
+            <!-- Слайд 4: Теорема Пифагора -->
+            <section>
+                <section>
+                    <h2>Теорема Пифагора (Книга I, Предложение 47)</h2>
+                    <div class="pythagoras-container">
+                        <div class="formula">
+                            <p>В прямоугольном треугольнике квадрат гипотенузы равен сумме квадратов катетов:</p>
+                            <div class="math-formula">
+                                \[c^2 = a^2 + b^2\]
+                            </div>
+                            <p>где \(c\) — гипотенуза, \(a\) и \(b\) — катеты.</p>
+                        </div>
+                        <div class="visualization" id="pythagoras-visualization">
+                            <!-- Здесь будет интерактивная визуализация -->
+                            <div class="placeholder-visual">Интерактивная визуализация теоремы Пифагора</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2>Доказательство Евклида</h2>
+                    <p>Евклид доказал теорему через равенство площадей:</p>
+                    <div class="proof-steps">
+                        <div class="step">
+                            <div class="step-number">1</div>
+                            <p>Строим квадраты на сторонах треугольника</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">2</div>
+                            <p>Доказываем равенство площадей треугольников</p>
+                        </div>
+                        <div class="step">
+                            <div class="step-number">3</div>
+                            <p>Показываем, что сумма площадей квадратов на катетах равна площади квадрата на гипотенузе</p>
+                        </div>
+                    </div>
+                    <div class="euclid-quote">
+                        "В прямоугольных треугольниках квадрат на стороне, стягивающей прямой угол, равен квадратам на сторонах, заключающих прямой угол."
+                    </div>
+                </section>
+            </section>
+
+            <!-- Слайд 5: Интерактивная геометрия -->
+            <section>
+                <h2>Интерактивная демонстрация</h2>
+                <p>Исследуйте основные геометрические построения Евклида:</p>
+                <div class="interactive-container">
+                    <div class="interactive-controls">
+                        <button onclick="drawEquilateralTriangle()">Построить равносторонний треугольник</button>
+                        <button onclick="drawCircle()">Начертить окружность</button>
+                        <button onclick="drawPerpendicular()">Провести перпендикуляр</button>
+                        <button onclick="clearCanvas()">Очистить</button>
+                    </div>
+                    <div class="canvas-container">
+                        <canvas id="geometry-canvas" width="600" height="400"></canvas>
+                    </div>
+                </div>
+                <p class="instruction">Нажмите на кнопки, чтобы увидеть классические построения циркулем и линейкой</p>
+            </section>
+
+            <!-- Слайд 6: Золотое сечение -->
+            <section>
+                <section>
+                    <h2>Золотое сечение (Книга VI)</h2>
+                    <div class="golden-section">
+                        <div class="definition">
+                            <p>Отрезок AB делится точкой C в золотом сечении, если:</p>
+                            <div class="math-formula">
+                                \[\frac{AB}{AC} = \frac{AC}{CB} = \varphi\]
+                            </div>
+                            <p>где \(\varphi = \frac{1 + \sqrt{5}}{2} \approx 1.618\) — золотое число.</p>
+                        </div>
+                        <div class="visual">
+                            <div class="golden-line">
+                                <div class="segment whole">AB</div>
+                                <div class="segment major">AC</div>
+                                <div class="segment minor">CB</div>
+                            </div>
+                            <div class="ratio">φ ≈ 1.618</div>
+                        </div>
+                    </div>
+                </section>
+                
+                <section>
+                    <h2>Золотой прямоугольник и спираль</h2>
+                    <p>Евклид описал построение золотого прямоугольника:</p>
+                    <div class="golden-rectangle-container">
+                        <div class="construction-steps">
+                            <ol>
+                                <li>Постройте квадрат</li>
+                                <li>Разделите его пополам</li>
+                                <li>Проведите диагональ полуквадрата</li>
+                                <li>Продолжите сторону квадрата на длину диагонали</li>
+                                <li>Завершите прямоугольник</li>
+                            </ol>
+                        </div>
+                        <div class="spiral-visual">
+                            <div class="placeholder-spiral">Визуализация золотой спирали</div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+            <!-- Слайд 7: Платоновы тела -->
+            <section>
+                <h2>Правильные многогранники (Книга XIII)</h2>
+                <p>Евклид доказал, что существует ровно 5 правильных многогранников:</p>
+                <div class="platonic-solids">
+                    <div class="solid">
+                        <div class="solid-name">Тетраэдр</div>
+                        <div class="solid-faces">4 треугольника</div>
+                    </div>
+                    <div class="solid">
+                        <div class="solid-name">Куб</div>
+                        <div class="solid-faces">6 квадратов</div>
+                    </div>
+                    <div class="solid">
+                        <div class="solid-name">Октаэдр</div>
+                        <div class="solid-faces">8 треугольников</div>
+                    </div>
+                    <div class="solid">
+                        <div class="solid-name">Додекаэдр</div>
+                        <div class="solid-faces">12 пятиугольников</div>
+                    </div>
+                    <div class="solid">
+                        <div class="solid-name">Икосаэдр</div>
+                        <div class="solid-faces">20 треугольников</div>
+                    </div>
+                </div>
+                <p class="historical-note">Платон связал эти тела с элементами мироздания: огонь (тетраэдр), земля (куб), воздух (октаэдр), вода (икосаэдр), эфир (додекаэдр).</p>
+            </section>
+
+            <!-- Слайд 8: Наследие Евклида -->
+            <section>
+                <h2>Наследие и влияние</h2>
+                <div class="legacy-container">
+                    <div class="legacy-item">
+                        <h3>Научный метод</h3>
+                        <p>"Начала" установили стандарт строгого доказательства в математике</p>
+                    </div>
+                    <div class="legacy-item">
+                        <h3>Образование</h3>
+                        <p>Более 2000 лет учебник по геометрии во всем мире</p>
+                    </div>
+                    <div class="legacy-item">
+                        <h3>Философия</h3>
+                        <p>Влияние на рационализм и философию науки</p>
+                    </div>
+                    <div class="legacy-item">
+                        <h3>Современная математика</h3>
+                        <p>Основа для неевклидовых геометрий и топологии</p>
+                    </div>
+                </div>
+                <div class="final-quote">
+                    "Нет царского пути к геометрии"<br>
+                    <span class="author">— Евклид</span>
+                </div>
+            </section>
+
+            <!-- Слайд 9: Заключение -->
+            <section>
+                <div class="conclusion-slide">
+                    <h2>Заключение</h2>
+                    <div class="key-points">
+                        <div class="point">
+                            <h3>Систематичность</h3>
+                            <p>"Начала" — первая полная аксиоматическая система</p>
+                        </div>
+                        <div class="point">
+                            <h3>Долговечность</h3>
+                            <p>2000 лет как основной учебник геометрии</p>
+                        </div>
+                        <div class="point">
+                            <h3>Влияние</h3>
+                            <p>Фундамент для всей западной математики и науки</p>
+                        </div>
+                    </div>
+                    <div class="resources">
+                        <h3>Дополнительные ресурсы</h3>
+                        <ul>
+                            <li><a href="https://archive.org/details/euclid_heath_2nd_ed" target="_blank">Полный текст "Начал" (англ.)</a></li>
+                            <li><a href="https://github.com/bladsvytro/MM_Doklad" target="_blank">Исходный код этой презентации</a></li>
+                            <li><a href="https://euclidthegame.org" target="_blank">Euclid: The Game — интерактивные построения</a></li>
+                        </ul>
+                    </div>
+                    <div class="thank-you">
+                        <p>Спасибо за внимание!</p>
+                        <p class="presenter">Презентация подготовлена для MM_Doklad</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <!-- Reveal.js JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/reveal.min.js"></script>
+    
+    <!-- Плагины Reveal.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/4.5.0/plugin/math/math.min.js"></script>
+    
+    <!-- Скрипты проекта -->
+    <script src="js/geometry.js"></script>
+    <script src="js/main.js"></script>
+    
+    <script>
+        // Инициализация Reveal.js
+        Reveal.initialize({
+            hash: true,
+            math: {
+                mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js',
+                config: 'TeX-AMS_HTML-full',
+                tex2jax: {
+                    inlineMath: [['$','$'], ['\\(','\\)']],
+                    displayMath: [['$$','$$'], ['\\[','\\]']],
+                    processEscapes: true,
+                    processEnvironments: true
+                }
+            },
+            plugins: [ RevealMath ],
+            transition: 'slide',
+            backgroundTransition: 'fade'
+        });
+    </script>
+</body>
+</html>
