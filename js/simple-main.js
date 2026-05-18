@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
         autoSlideStoppable: true,
         autoSlideMethod: Reveal.navigateNext,
         defaultTiming: 120,
-        mouseWheel: false,
+        mouseWheel: true,
         hideInactiveCursor: true,
         hideCursorTime: 5000,
         
